@@ -1,0 +1,611 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%; 
+    background: url(./wallpaperbetter.com_1920x1200.jpg) no-repeat center ;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+li{
+    list-style: none;
+    text-align: center;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-width: 150px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.menu{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+.menu ul{
+    background-color: #350b5a5f;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.menu li{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: relative;
+    display: block;
+}
+.menu li i{
+    margin-left: 5px;
+}
+
+.menu > li{
+    display: inline-block;
+}
+.menu ul{
+    display: none;
+    position: absolute;
+}
+.menu li:hover{
+    background-color: #5914955f;
+}
+.menu input[type=checkbox]{
+    display: none;
+}
+.menu input[type=checkbox]:checked + li{
+    background-color: #5914955f;
+}
+.menu > input[type=checkbox]:checked + li > ul{
+    display: block;
+}
+ .menu  > li > ul input[type=checkbox]:checked + li > ul{
+    display: block;
+}
+.menu  li label:first-child{
+    display: none;
+} 
+.menu > input[type=checkbox]:checked + li > a > label:first-child{
+    display: block;
+}
+.menu > input[type=checkbox]:checked + li > a > label:last-child{
+    display: none;
+}
+.menu > li  ul > input[type=checkbox]:checked + li  > a > label:first-child{
+    display: block;
+} 
+.menu > li  ul > input[type=checkbox]:checked + li  > a > label:last-child{
+    display: none;
+} 
+.menu > li > ul{
+    left: 0;
+    top: 100%;
+}
+.menu > li > ul ul{
+    left: 100%;
+    top: 0;
+}
+.menu > #toggle_bar_btn{
+    display: block;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.menu > #toggle_bar_btn:hover{
+    background-color: #5914955f;
+}
+.toggle_layout{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1999;
+    background-color: rgba(33, 8, 65, 0.608);
+    right: 0;
+    bottom: 0;
+}
+.menu .navbar_right{
+    position: fixed;
+    width: 20vw;
+    min-height: 100vh;
+    z-index:2000;
+    background-color: #2c1b4c;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.navbar_right  ul{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(79, 26, 105);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.navbar_right li{
+    width: 100%;
+    color: #fff;
+    height: 70px;
+    display: block;
+    border-bottom: 1px solid rgb(138, 138, 138);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.navbar_right  li a{
+    line-height: 70px;
+    height: 70px;
+}
+.menu > input[id^=toggle_bar]:checked + label{
+    width: 0;
+}
+.menu > input[id^=toggle_bar]:checked ~ ul{
+    right: -20vw;
+}
+.menu .navbar_right input:checked + li > a > label:first-child {
+    display: block;
+} 
+.menu .navbar_right input:checked + li > a > label:last-child {
+    display: none;
+}
+.menu .navbar_right > input[id^=nav_chk_down_accor1]:checked ~ [id=navbar_right_sub1]{
+    display: block;
+}
+.menu .navbar_right > input[id^=nav_chk_down_accor2]:checked ~ [id=navbar_right_sub2]{
+    display: block;
+}
+/* tooltip */
+#tooltip{
+    width: fit-content;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+#tooltip > h1{
+    color: white;
+    font-size: 80px;
+    display: block;
+    /* position: relative; */
+    cursor: pointer;
+    user-select: none;
+}
+
+#tooltip > span {
+    display: block;
+    visibility: hidden;
+    max-width:300px ;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c00345f;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#tooltip span::before{
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1c00345f;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#tooltip h1:hover{
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(236,140,142),
+      0 0 82px rgb(236,140,142),
+      0 0 92px rgb(236,140,142),
+      0 0 102px rgb(236,140,142),
+      0 0 151px rgb(236,140,142);
+}
+#tooltip:hover span{
+   visibility: visible;
+}
+#sorryTle {
+    text-decoration: none; 
+    color: white;
+}
+.btn_sign_up > label#sign_up_cl{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    max-width: 150px;
+    padding: 10px 15px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgb(210,90,128);
+    user-select: none;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.btn_sign_up > label:hover{
+    box-shadow: 0 0 10px rgb(210,90,128), 0 0 40px rgb(210,90,128), 0 0 80px rgb(210,90,128);
+    
+}
+#modal_lay{
+    width: 100vw;
+    height: 100vh;
+    z-index: 2001;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(33, 8, 65, 0.608);
+   
+}
+
+.btn_sign_up .modal_sign_up{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height:400px;
+    /*background-color: aqua;
+    */-webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 2002;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.btn_sign_up .modal_sign_up img{
+    width: 280px;
+    object-fit: cover;
+}
+/* .btn_sign_up > input[type=checkbox], .btn_sign_up span.btn_login input[type=checkbox]{
+    display: none;
+} */
+.btn_sign_up input[type=checkbox]:not(.chk_remember > input){
+    display: none;
+}
+div.modal_sign_up_right{
+    width: 100%;
+    padding: 25px 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 20px;
+}
+div.modal_sign_up_right input {
+    border: 2px solid rgb(8, 150, 110);
+}
+div.modal_sign_up_right > span{
+    display: block;
+}
+ .modal_sign_up_right > span.chk_remember{
+    display: flex !important;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+}
+.modal_sign_up_right > span.btn_login{
+    display: flex !important;
+    gap: 50px;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+div.modal_sign_up_right > span > button{
+    width: 150px;
+    min-height: 40px;
+    border: none;
+    color: white;
+    background: rgb(8, 150, 110);
+}
+div.modal_sign_up_right > span > #switch{
+    display: flex;
+    width: 70px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background: rgb(61, 61, 61);
+    position: relative;
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+div.modal_sign_up_right > span > #switch::after{
+    content: " ";
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    -moz-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+}
+div.modal_sign_up_right > span > button:hover{
+    box-shadow: 0 0 10px rgb(8, 150, 110), 0 0 40px rgb(8, 150, 110), 0 0 80px rgb(8, 150, 110);
+}
+div.btn_sign_up  input[type=checkbox]:checked ~ label{
+    display: none;
+}
+div.btn_sign_up  > input[type=checkbox]:checked ~ div{
+    display: none;
+    transition: display .5s ease-in-out;
+    -webkit-transition: display .5s ease-in-out;
+    -moz-transition: display .5s ease-in-out;
+    -ms-transition: display .5s ease-in-out;
+    -o-transition: display .5s ease-in-out;
+}
+div.modal_sign_up > input[type=checkbox]:checked + div{
+    color: white;
+    background-color: black;
+    transition: background-color .5s ease-in-out;
+}
+div.modal_sign_up > input[type=checkbox]:checked + div #switch{
+    background-color: white;
+    transition: background-color .5s ease-in-out;
+    -webkit-transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+    -ms-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+}
+div.modal_sign_up > input[type=checkbox]:checked + div #switch::after{
+    background-color: black;
+    left: calc(100% - 28px);
+    transition: left .5s ease-in-out;
+    -webkit-transition: left .5s ease-in-out;
+    -moz-transition: left .5s ease-in-out;
+    -ms-transition: left .5s ease-in-out;
+    -o-transition: left .5s ease-in-out;
+}
+div.modal_sign_up > input[type=checkbox]:checked + div label i.fa-sun{
+    visibility: hidden;
+    transition: left .5s ease-in-out;
+}
+/* .aside_bar */
+.aside_bar{
+    background: #fff;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-box-shadow: 0px 3px 5px rgba(44, 71, 146, 0.2);
+    box-shadow: 0px 3px 5px rgba(44, 71, 146, 0.2);
+    width: 36px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+.aside_bar li{
+    list-style: none;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.aside_bar li a{
+    text-decoration: none;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: rgb(175, 167, 167);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.aside_bar li:not(:last-child){
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+.aside_bar li:hover:first-child a{
+    color: rgb(20, 23, 182);
+    border-bottom:rgb(20, 23, 182) 3px solid;
+}
+
+.aside_bar li:hover:nth-child(2n) a{
+    color: rgb(255, 0, 115);
+    border-bottom:rgb(255, 0, 115)3px solid;
+}
+.aside_bar li:hover:last-child a{
+    color: rgb(224, 25, 25);
+    border-bottom:rgb(224, 25, 25) 3px solid;
+}
+/* chat-box */
+.chat_box{
+    max-width: 330px;
+    max-height: 580px;
+    z-index: 99;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    box-shadow: 0px 10px 5px rgba(44, 71, 146, 0.2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+.chat_box_mess{
+    display: none;
+}
+.chat_box_header, .chat_box_area, .chat_box_in{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.chat_box_header{
+    padding-top: 16px;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(50,46,125) ;
+    color: white;
+    position: relative;
+}
+
+.chat_box_header span{
+    font-size: 14px;
+}
+.chat_box_header > label{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.chat_box_area{
+    height: 300px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.078);
+}
+.chat_box_in{
+    padding-bottom: 16px;
+    height: 50px;
+    color: rgb(78, 78, 77);
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    gap: 10px;
+}
+ .chat_box_in input{
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+.chat_box_in i{
+    color: rgb(144, 144, 143);
+}
+.chat_box > input {
+    display: none;
+}
+.chat_box > label{
+    color: rgb(50,46,125);
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.694);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+.chat_box > input:checked ~ label{
+   display: none;
+}
+.chat_box [id^=cht_bx]:checked ~ [id^=mess]{
+   display: block;
+}
+ .chat_box [id^=close_chatbx]:checked + label{
+    display: flex;
+ }
+.chat_box label:hover {
+    transform:rotate(12deg) ;
+    -webkit-transform:rotate(12deg) ;
+    -moz-transform:rotate(12deg) ;
+    -ms-transform:rotate(12deg) ;
+    -o-transform:rotate(12deg) ;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+}
+
+
+
+
+
