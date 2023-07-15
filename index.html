@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./hongkong.png" type="image/x-icon">
+    <title>Welcome to Hong Kong!</title>
+</head>
+
+<body>
+    <ul class="menu wrapper">
+        <li><a href="#">Home</a></li>
+        <input type="checkbox" name="nav_chk" id="nav_chk_down">
+        <li><a href="#"><label for="nav_chk_down">Product <i class="fa-solid fa-caret-up"></i></label><label
+                    for="nav_chk_down">Product <i class="fa-solid fa-caret-down"></i></label></a>
+            <!-- <input type="checkbox" name="nav_chk" id="nav_chk"> -->
+            <ul>
+                <li><a href="#">Founded</a></li>
+                <li><a href="#">People</a></li>
+                <input type="checkbox" name="nav_chk" id="nav_chk_right">
+                <li><a href="#"><label for="nav_chk_right">Customer <i class="fa-solid fa-caret-left"></i></label><label
+                            for="nav_chk_right">Customer <i class="fa-solid fa-caret-right"></i></label></a>
+                    <ul>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">ASIA</a></li>
+                        <input type="checkbox" name="nav_chk" id="nav_chk_right2">
+                        <li><a href="#"><label for="nav_chk_right2">EU
+                                    <i class="fa-solidfa-caret-left">
+                                    </i></label><label for="nav_chk_right2">EU <i
+                                        class="fa-solid fa-caret-right"></i></label></a>
+                            <ul>
+                                <li><a href="#">FRANCE</a></li>
+                                <li><a href="#">RUSSIA</a></li>
+                                <li><a href="#">ITALIA</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <input type="checkbox" name="nav_chk" id="nav_chk_down2">
+        <li><a href="#"><label for="nav_chk_down2">About 
+                            <i class="fa-solid fa-caret-up"></i></label>          
+                        <label for="nav_chk_down2">About 
+                            <i class="fa-solid fa-caret-down"></i></label></a>
+            <ul>
+                <li><a href="#">Founded</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Customer</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">More</a></li>
+
+        <label for="toggle_bar" id="toggle_bar_btn"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" name="toggle" id="toggle_bar" checked>
+        <label for="toggle_bar" class="toggle_layout"></label>
+        <!-- accordion bar -->
+        <ul class="navbar_right">
+            <li><a href="#">Home</a></li>
+            <input type="checkbox" name="nav_chk" id="nav_chk_down_accor1">
+            <li><a href="#">
+                <label for="nav_chk_down_accor1">Product 
+                    <i class="fa-solid fa-caret-up"></i></label>
+                <label for="nav_chk_down_accor1">Product 
+                    <i class="fa-solid fa-caret-down"></i></label></a></li>
+            <ul id="navbar_right_sub1">
+                <li><a href="">AI</a></li>
+                <li><a href="">Software</a></li>
+                <li><a href="">Hosting</a></li>
+                <li><a href="">AI</a></li>
+                <li><a href="">Software</a></li>
+                <li><a href="">Hosting</a></li>
+                <li><a href="">AI</a></li>
+                <li><a href="">Software</a></li>
+                <li><a href="">Hosting</a></li>
+                <li><a href="">AI</a></li>
+                <li><a href="">Software</a></li>
+                <li><a href="">Hosting</a></li>
+            </ul>
+            <input type="checkbox" name="nav_chk" id="nav_chk_down_accor2">
+            <li><a href="#"><label for="nav_chk_down_accor2">About <i class="fa-solid fa-caret-up"></i></label><label
+                        for="nav_chk_down_accor2">About <i class="fa-solid fa-caret-down"></i></label></a></li>
+            <ul id="navbar_right_sub2">
+                <li><a href="">Teams</a></li>
+                <li><a href="">Company</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Founded</a></li>
+        </ul>
+    </ul>
+
+    <!-- tooltip -->
+    <div id="tooltip" href="#">
+        <h1>HONG KONG</h1>
+        <span>Hồng Kông (tiếng Trung: 香港; Hán-Việt: Hương Cảng, tiếng Hồng Kông: [hœ́ːŋ.kɔ̌ːŋ] (nghe), tiếng Anh: Hong
+            Kong; /ˌhɒŋˈkɒŋ/ (nghe)), tên chính thức là Đặc khu hành chính Hồng Kông thuộc Cộng hoà Nhân dân Trung
+            Hoa,[d] là một vùng đô thị đặc biệt, cũng như một trong hai đặc khu hành chính của Cộng hòa Nhân dân Trung
+            Hoa (cùng với Ma Cao)</span>
+    </div>
+    <!-- sign up -->
+    <div class="btn_sign_up">
+        <input type="checkbox" name="" id="modal_chk" checked>
+        <label for="modal_chk" id="sign_up_cl">SIGN UP</label>
+        <label for="modal_chk" id="modal_lay"></label>
+        <div class="modal_sign_up">
+            <img src="./pexels-motional-studio-1081685.jpg" alt="">
+            <input type="checkbox" name="" id="chk_dark">
+            <div class="modal_sign_up_right">
+                <h2>Log in</h2>
+                <span class="">
+                    <p>Email</p>
+                    <input type="text" name="" id="">
+                </span>
+                <span class="">
+                    <p>Password</p>
+                    <input type="password" name="" id="">
+                </span>
+                <span class="chk_remember">
+                    <input type="checkbox" name="" id="">
+                    <p>Remember me</p>
+                </span>
+                <span class="btn_login">
+                    <button type="submit">
+                        <label for="modal_chk">Log in</label>
+                    </button>
+                    <label id="switch" for="chk_dark">
+                        <i class="fas fa-moon" style="color: rgb(98, 183, 202);"></i>
+                        <i class="fas fa-sun" style="color: rgb(255, 183, 0);"></i>
+                    </label>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- aside_bar -->
+    <ul class="aside_bar">
+        <li id="aside_bar1"><a href="#">Facebook</a></li>
+        <li id="aside_bar2"><a href="#">Instagram</a></li>
+        <li id="aside_bar3"><a href="#">Youtube</a></li>
+    </ul>
+
+    <!-- chat_box -->
+    <div class="chat_box">
+        <input type="checkbox" name="cht_bx" id="cht_bx">
+        <label for="cht_bx"><i class="fas fa-comment"></i></label>
+        <div class="chat_box_mess" id="mess">
+            <div class="chat_box_header">
+                <h5>Welcome to HongKong</h5>
+                <span>Chúng tôi thường trả lời ngay sau khi được hỏi</span>
+                <label for="cht_bx"><i class="fa-solid fa-x"></i></i></label>
+            </div>
+            <div class="chat_box_area"></div>
+            <div class="chat_box_in">
+                <input type="text" name="cbx_in" id="cbx_in" placeholder="Nhập tin nhắn">
+                <i class="fas fa-thumbtack"></i>
+                <i class="fa-regular fa-face-smile"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
